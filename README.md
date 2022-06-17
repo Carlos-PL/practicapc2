@@ -1,2 +1,0 @@
-# practicapc2
-practica
