@@ -1,10 +1,10 @@
 # Laboratorio Número 2
 
-<b>Sección:</b> 1
+<b>Sección:</b> 2
 
-<b>Fecha:</b> Jueves 16 de Junio
+<b>Fecha:</b> Viernes 17 de Junio
 
-<b>Horario:</b> 18:00
+<b>Horario:</b> 07:00
 
 <b>Duración:</b> 2 Hora
 
@@ -18,19 +18,20 @@ Leer detenidamente la pregunta.
 
 ## <b>Pregunta 1:</b> 
 
-UtecPeliculas es una `restful API` que facilita el descubrimiento para visualizar películas en las diferentes salas de la Universidad de Ingeniería y Tecnología. 
+UtecPeliculas es una `restful API` que facilita el descubrimiento y venta de entradas para visualizar películas en las diferentes salas de la Universidad de Ingeniería y Tecnología. 
 
-Las `APIs` te permiten listar nuevas películas, generos de películas, actores que pertenecen a alguna película, los países a los que pertenecen las peliculas y país de nacimiento de los actores.
+Las `APIs` te permiten listar nuevas películas, las salas donde se mostraran las películas, las funciones donde se ven qué películas se mostrara en una sala determinada, y entradas que se pueden comprar.
 
-La idea es construir los [`modelos`](./pregunta1/backend/models.py) para implementar los [`endpoints`](./pregunta1/backend/server/__init__.py), conectarlos a una base de datos `PostgresQL` llamada `peliculasdb` para guardar la información, consultarla y crear nueva data de los recursos.
+La idea es construir los [`modelos`](./pregunta1/backend/models.py) para implementar los [`endpoints`](./pregunta1/backend/server/__init__.py), conectarlos a una base de datos `PostgresQL` para guardar la información, consultarla y crear nueva data de los recursos.
 
-## Visión General
+## Vision General
 
-Los modelos están vacíos, cada modelo contiene una documentación sobre que propiedades, llaves primarias (`PK`), llaves foráneas (`FK`) y usted tiene que implementarlo.
+Los modelos están vacios, cada modelo contiene una documentación sobre que propiedades, llaves primarias (`PK`), llaves foraneas (`FK`) y usted tiene que implementarlo.
 
-Las [`APIs`](./pregunta1/backend/server/__init__.py) están vacías, cada endpoint debe ser implementado para recuperar, buscar, actualizar, eliminar y crear a partir de una base de datos, adicionalmente permitir `CORS` para el siguiente ;<b>HOST:</b> `http://127.0.0.1:8081`
+Las [`APIs`](./pregunta1/backend/server/__init__.py) están vacías, cada endpoint debe ser implementado para recuperar, buscar, actualizar, eliminar y crear a partir de una base de datos, adicionalmente permitir `CORS` para el siguiente <b>HOST:</b> `http://127.0.0.1:8082`
 
-Los [`tests`](./pregunta1/backend/test_peliculas_api.py) estan vacíos, y tienen nombres muy intuitivos sobre lo que tienes que verificar con `asserts`. Cada test debe tener como mínimo el assert del `status_code`, assert de `success` o `failed`, y `assertTrue` para alguna respuesta.
+Los [`tests`](./pregunta1/backend/test_peliculas_api.py) estan vacios, y tienen nombres muy intuitivos sobre lo que tienes que verificar con `asserts`. 
+Cada test debe tener como mínimo el assert del `status_code`, assert de `success` o `failed`, y `assertTrue` para alguna respuesta. El nombre de la base de datos de testing es: `peliculasdb_test`
 
 Queremos que UtecPeliculas provea una `API` con todos los estandares para que los clientes puedan utilizarlo y crear una aplicación segura, entendible y escalable.
 
@@ -40,9 +41,9 @@ Queremos que UtecPeliculas provea una `API` con todos los estandares para que lo
 Existen 4 recursos: 
 <ol>
     <li>Películas</li>
-    <li>Generos</li>
-    <li>Actores</li>
-    <li>Paises</li>
+    <li>Sala</li>
+    <li>Funcion</li>
+    <li>Entrada</li>
 </ol>
 
 El puntaje máximo que se puede obtener por terminar correctamente los 9 tests por recurso es de 5 puntos y el mínimo es de 0 puntos.
